@@ -79,7 +79,9 @@ class FlutterInputField extends StatelessWidget {
           validator: (String? value) {
             return validateTextField!(value);
           },
-          onEditingComplete: onDone!(),
+          onEditingComplete: () {
+            onDone();
+          },
         ),
       ],
     );
