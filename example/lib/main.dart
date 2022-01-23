@@ -45,6 +45,8 @@ class _MyHomePageState extends State<MyHomePage> {
               labelText: 'Username',
               filledColor: Colors.grey.shade200,
               onChange: (String str) {},
+              hintFontSize: 20,
+              labelFontSize: 10,
               onDone: () {},
             ),
             SizedBox(height: _height * 0.02),

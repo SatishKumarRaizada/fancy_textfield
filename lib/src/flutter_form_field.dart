@@ -14,6 +14,8 @@ class FlutterInputField extends StatelessWidget {
   final Color? filledColor;
   final bool isSecure;
   final int lineHeight;
+  final double labelFontSize;
+  final double hintFontSize;
 
   const FlutterInputField({
     Key? key,
@@ -30,6 +32,8 @@ class FlutterInputField extends StatelessWidget {
     this.filledColor = Colors.lightBlue,
     this.isSecure = false,
     this.lineHeight = 1,
+    this.labelFontSize = 16,
+    this.hintFontSize = 16,
   }) : super(key: key);
 
   @override
@@ -57,6 +61,12 @@ class FlutterInputField extends StatelessWidget {
             hintText: hintText,
             prefixIcon: prefixWidget,
             suffixIcon: suffixWidget,
+            labelStyle: TextStyle(
+              fontSize: labelFontSize,
+            ),
+            hintStyle: TextStyle(
+              fontSize: hintFontSize,
+            ),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8.0),
               borderSide: const BorderSide(
